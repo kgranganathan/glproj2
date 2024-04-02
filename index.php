@@ -7,11 +7,11 @@
 	<h1>MySQL Table Viewer</h1>
 	<?php
 		// Define database connection variables
-		$servername = "glproj2sqlserver.mysql.database.azure.com";
-		$username = "sqladmin";
-		$password = "GlAdmin$123";
+		$servername = "glazproj2.mysql.database.azure.com";
+		$username = "gladmin";
+		$password = "Gl@Admin";
 		$dbname = "mydatabase";
-
+		
 		// Create database connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -29,7 +29,7 @@
 			echo "<table><tr><th>ID</th><th>Name</th><th>Email</th></tr>";
 			// Loop through results and display each row in the table
 			while($row = $result->fetch_assoc()) {
-				echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td>" . $row["email"] . "</td></tr>";
+				echo "<tr><td>" . $row["emp_no"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["email_id"] . "</td></tr>";
 			}
 			echo "</table>";
 		} else {
